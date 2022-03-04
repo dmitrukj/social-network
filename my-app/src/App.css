@@ -6,28 +6,5 @@
     "nav cont ";
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
-}
-.header {
-  grid-area: header;
-  background-color: rgb(240, 240, 251);
-}
-.nav {
-  grid-area: nav;
-  background-color: wheat;
-}
-.content {
-  grid-area: cont;
-  background-color: ghostwhite;
-}
-
-.header img {
-  width: 60px;
-}
-
-.link {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: xx-large;
-  color: blueviolet;
+  grid-gap: 10px;
 }

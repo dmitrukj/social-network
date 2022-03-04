@@ -1,0 +1,9 @@
+.nav {
+  grid-area: nav;
+  background-color: rgb(240, 240, 251);
+  text-align: end;
+  padding-right: 25px;
+}
+.item a {
+  color: rgb(111, 0, 255);
+}
