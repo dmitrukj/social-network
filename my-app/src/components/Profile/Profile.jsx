@@ -14,10 +14,6 @@ const Profile = () => {
       <MyPosts />
       <Post />
       <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
     </div>
   );
 };
