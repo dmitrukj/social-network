@@ -6,4 +6,8 @@
 }
 .item a {
   color: rgb(111, 0, 255);
+  text-decoration: none;
+}
+.item .activeLink {
+  color: gold;
 }
