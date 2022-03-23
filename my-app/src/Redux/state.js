@@ -1,3 +1,7 @@
+import profileReduser from "./profileReduser";
+import dialogsReduser from "./dialogsReduser";
+import sideBarReduser from "./sideBarReduser";
+
 let store = {
   _state: {
     profilePage: {
@@ -41,19 +45,11 @@ let store = {
   },
 
   dispatch(action) {
-    if (action.type === "ADD-POST") {
-      let newPost = {
-        id: 5,
-        message: this._state.profilePage.newPostText,
-        likesCount: 0,
-      };
-      this._state.profilePage.post.push(newPost);
-      this._state.profilePage.newPostText = "";
-      this._callSubscriber(this._state);
-    } else if (action.type === "UPDATE-NEW-POST-TEXT") {
-      this._state.profilePage.newPostText = action.newText;
-      this._callSubscriber(this._state);
-    }
+    this._state.profilePage = profileReduser(this._state.profilePage, action);
+    this._state.dialogsPage = dialogsReduser(this._state.dialogsPage, action);
+    this._state.sideBar = sideBarReduser(this._state.sideBar, action);
+
+    this._callSubscriber(this._state);
   },
 };
 
